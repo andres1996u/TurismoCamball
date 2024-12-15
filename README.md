@@ -7,7 +7,7 @@
   <br />
   <br />
   
-  <img src="./readme-images/project-logo.png" />
+  <img src="./C:\Users\Windows\Documents\GitHub\Turismo Cambal\assets\images\eje cafetero\Turismo-Camball.svg" />
 
   <h2 align="center">Turismo Camball</h2>
 
