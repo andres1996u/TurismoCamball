@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados - Turismo Camball</title>
+  <link rel="stylesheet" href="/static/css/style.css"> <!-- Ruta de estilos CSS -->
+</head>
+<body>
+  <header>
+    <h1>Destinos Turísticos</h1>
+    <a href="/" class="btn btn-primary">Volver al Inicio</a>
+  </header>
+
+  <main>
+    {% if destinations %}
+      <section class="destinations">
+        <h2>Destinos Disponibles</h2>
+        <ul class="destination-list">
+          {% for destination in destinations %}
+            <li class="destination-item">
+              <h3>{{ destination.name }}</h3>
+              <p><strong>Ubicación:</strong> {{ destination.location }}</p>
+              <p><strong>Descripción:</strong> {{ destination.description }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% else %}
+      <p>No hay destinos disponibles en este momento.</p>
+    {% endif %}
+  </main>
+
+  <footer>
+    <p>&copy; 2022 Turismo Camball. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
