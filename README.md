@@ -1,56 +1,46 @@
-<div align="center">
+<div align="center"> 
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/tourly)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/tourly?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/tourly?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/FYFmQEpZywc?style=social)](https://youtu.be/FYFmQEpZywc)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/andres1996u/TurismoCamball)
+  ![GitHub stars](https://img.shields.io/github/stars/andres1996u/TurismoCamball?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/andres1996u/TurismoCamball?style=social)
 
   <br />
   <br />
   
   <img src="./readme-images/project-logo.png" />
 
-  <h2 align="center">Tourly - Travel website</h2>
+  <h2 align="center">Turismo Camball</h2>
 
-  Tourly is fully responsive travel website, <br />Responsive for all devices, built using HTML, CSS, and JavaScript.
+  Turismo Camball es un sitio web completamente responsivo enfocado en el turismo en Colombia, diseñado para adaptarse a todos los dispositivos. Desarrollado utilizando HTML, CSS, JavaScript y Flask.
 
-  <a href="https://codewithsadee.github.io/tourly/"><strong>➥ Live Demo</strong></a>
+  <a href="https://andres1996u.github.io/TurismoCamball/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
 <br />
 
-### Demo Screeshots
+---
 
-![Tourly Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+### Capturas del Proyecto
 
-### Prerequisites
+![Turismo Camball Desktop Demo](./readme-images/desktop.png "Demo en escritorio")
 
-Before you begin, ensure you have met the following requirements:
+---
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+### Requisitos Previos
 
-### Run Locally
+Antes de comenzar, asegúrate de tener los siguientes requisitos:
 
-To run **Tourly** locally, run this command on your git bash:
+* [Git](https://git-scm.com/downloads "Descargar Git") debe estar instalado en tu sistema operativo.
+* Un entorno de desarrollo como [VSCode](https://code.visualstudio.com/) o similar.
 
-Linux and macOS:
+---
+
+### Ejecutar Localmente
+
+Para ejecutar **Turismo Camball** localmente, ejecuta este comando en tu terminal:
+
+#### Linux y macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/tourly.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/tourly.git
-```
-
-### Contact
-
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-### License
-
-This project is **free to use** and does not contains any license.
+sudo git clone https://github.com/andres1996u/TurismoCamball.git
