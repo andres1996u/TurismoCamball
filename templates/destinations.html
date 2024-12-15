@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Destinos</h1>
+    <a href="/">Volver al inicio</a>
+  </header>
+
+  <main>
+    <div id="filters">
+      <label for="region">Región:</label>
+      <select id="region">
+        <option value="">Todas</option>
+        <option value="Risaralda">Risaralda</option>
+        <option value="Quindío">Quindío</option>
+      </select>
+
+      <label for="price-range">Rango de precios:</label>
+      <select id="price-range">
+        <option value="">Cualquiera</option>
+        <option value="20000-50000">20,000 - 50,000</option>
+      </select>
+
+      <button id="filter-btn">Filtrar</button>
+    </div>
+
+    <section id="destinations-list">
+      <!-- Aquí se cargarán los destinos dinámicamente -->
+    </section>
+  </main>
+
+  <script src="/static/js/destinations.js"></script>
+</body>
+</html>

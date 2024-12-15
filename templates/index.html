@@ -1,210 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
 
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turismo Camball - Colombia</title>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <title>Turismo Camball</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="/static/css/style.css">
 </head>
-
-<body id="top">
-
-  <!-- Encabezado -->
-  <header class="header" data-header>
-
-    <div class="overlay" data-overlay></div>
-
-    <div class="header-top">
-      <div class="container">
-
-        <a href="tel:+57 3048808134" class="helpline-box">
-          <div class="icon-box">
-            <ion-icon name="call-outline"></ion-icon>
-          </div>
-          <div class="wrapper">
-            <p class="helpline-title">¿Necesitas ayuda? Contáctanos:</p>
-            <p class="helpline-number">+57 (304) 224 1894</p>
-          </div>
-        </a>
-
-        <div class="header-btn-group">
-          <button class="search-btn" aria-label="Buscar">
-            <ion-icon name="search"></ion-icon>
-          </button>
-          <button class="nav-open-btn" aria-label="Abrir Menú" data-nav-open-btn>
-            <ion-icon name="menu-outline"></ion-icon>
-          </button>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="header-bottom">
-      <div class="container">
-
-        <ul class="social-list">
-          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
-        </ul>
-
-        <nav class="navbar" data-navbar>
-          <div class="navbar-top">
-            <a href="#" class="logo"><img src="./assets/images/logo-blue.svg" alt="Logo Turismo Camball"></a>
-            <button class="nav-close-btn" aria-label="Cerrar Menú" data-nav-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-          </div>
-          <ul class="navbar-list">
-            <li><a href="#home" class="navbar-link" data-nav-link>Inicio</a></li>
-            <li><a href="#about" class="navbar-link" data-nav-link>Acerca de</a></li>
-            <li><a href="#destination" class="navbar-link" data-nav-link>Destinos</a></li>
-            <li><a href="#package" class="navbar-link" data-nav-link>Planes</a></li>
-            <li><a href="#gallery" class="navbar-link" data-nav-link>Galería</a></li>
-            <li><a href="#contact" class="navbar-link" data-nav-link>Contacto</a></li>
-          </ul>
-        </nav>
-
-        <button class="btn btn-primary">Consultar</button>
-
-      </div>
-    </div>
-
+<body>
+  <header>
+    <h1>Bienvenido a Turismo Camball</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/destinations">Destinos</a></li>
+        <li><a href="/register">Registrarse</a></li>
+        <li><a href="/login">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Contenido Principal -->
   <main>
-    <article>
-
-      <!-- Hero -->
-      <section class="hero" id="home">
-        <div class="container">
-          <h2 class="h1 hero-title">Explora Colombia.</h2>
-          <p class="hero-text">
-            Vive experiencias únicas en un país lleno de cultura, biodiversidad y paisajes impresionantes.
-            Desde los Andes hasta el Caribe, Colombia te espera con los brazos abiertos.
-          </p>
-          <div class="btn-group">
-            <button class="btn btn-primary">Más información</button>
-            <button class="btn btn-secondary">Reserva ahora</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Búsqueda de Tours -->
-      <section class="tour-search">
-        <div class="container">
-          <form action="" class="tour-search-form">
-            <div class="input-wrapper">
-              <label for="destination" class="input-label">Destino</label>
-              <input type="text" name="destination" id="destination" required placeholder="Ingresa un destino" class="input-field">
-            </div>
-            <div class="input-wrapper">
-              <label for="people" class="input-label">Número de personas</label>
-              <input type="number" name="people" id="people" required placeholder="Número de personas" class="input-field">
-            </div>
-            <div class="input-wrapper">
-              <label for="checkin" class="input-label">Fecha de entrada</label>
-              <input type="date" name="checkin" id="checkin" required class="input-field">
-            </div>
-            <div class="input-wrapper">
-              <label for="checkout" class="input-label">Fecha de salida</label>
-              <input type="date" name="checkout" id="checkout" required class="input-field">
-            </div>
-            <button type="submit" class="btn btn-secondary">Buscar</button>
-          </form>
-        </div>
-      </section>
-
-      <!-- Destinos -->
-      <section class="popular" id="destination">
-        <div class="container">
-          <p class="section-subtitle">Explora</p>
-          <h2 class="h2 section-title">Destinos Populares</h2>
-          <ul class="popular-list">
-            <li>
-              <div class="popular-card">
-                <figure class="card-img"><img src="./assets/images/popular-1.jpg" alt="Termales San Vicente"></figure>
-                <div class="card-content">
-                  <h3 class="h3 card-title"><a href="#">Termales San Vicente</a></h3>
-                  <p>Santa Rosa, Risaralda</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="popular-card">
-                <figure class="card-img"><img src="./assets/images/popular-2.jpg" alt="Parque Consotá"></figure>
-                <div class="card-content">
-                  <h3 class="h3 card-title"><a href="#">Parque Consotá</a></h3>
-                  <p>Pereira, Risaralda</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Planes -->
-      <section class="package" id="package">
-        <div class="container">
-          <h2 class="h2 section-title">Planes Disponibles</h2>
-          <ul class="package-list">
-            <li>
-              <div class="package-card">
-                <figure class="card-banner"><img src="./assets/images/packege-1.jpg" alt="Plan Eje Cafetero"></figure>
-                <h3 class="h3 card-title">Plan Eje Cafetero</h3>
-                <p>COP 600,900 / Plan Premium</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-    </article>
+    <section>
+      <h2>Explora los mejores destinos de Colombia</h2>
+      <p>Descubre experiencias únicas en el Eje Cafetero y otras regiones de Colombia.</p>
+    </section>
   </main>
 
-  <!-- Pie de Página -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <p class="footer-text">
-          Colombia, el país más acogedor del mundo. ¡Ven y descubre su magia!
-        </p>
-        <ul>
-          <li><a href="tel:+57 3048808134" class="contact-link">+57 (304) 8808134</a></li>
-          <li><a href="mailto:turismocamball@gmail.com" class="contact-link">turismocamball@gmail.com</a></li>
-          <li><address>Dosquebradas, Risaralda, Colombia</address></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Turismo Camball. Todos los derechos reservados.</p>
-    </div>
+  <footer>
+    <p>&copy; 2024 Turismo Camball. Todos los derechos reservados.</p>
   </footer>
-
-  <!-- Botón de Ir Arriba -->
-  <a href="#top" class="go-top" data-go-top>
-    <ion-icon name="chevron-up-outline"></ion-icon>
-  </a>
-
-  <!-- Script personalizado -->
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 </html>
