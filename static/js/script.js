@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Navbar toggle functionality
+ * Funcionalidad para el toggle del menú de navegación
  */
 const overlay = document.querySelector("[data-overlay]");
 const navOpenBtn = document.querySelector("[data-nav-open-btn]");
@@ -14,13 +14,13 @@ const navToggleHandler = () => {
   overlay.classList.toggle("active");
 };
 
-// Adding event listeners for navbar toggle
+// Agregar event listeners para el toggle del menú
 [navOpenBtn, navCloseBtn, overlay, ...navLinks].forEach(elem => {
   elem.addEventListener("click", navToggleHandler);
 });
 
 /**
- * Header sticky and "Go to Top" button functionality
+ * Funcionalidad de header sticky y botón "Ir Arriba"
  */
 const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
@@ -32,7 +32,7 @@ window.addEventListener("scroll", () => {
 });
 
 /**
- * Button actions for saving and fetching destinations
+ * Acciones de botones para guardar y obtener destinos
  */
 document.getElementById('save-btn')?.addEventListener('click', () => {
   const data = {
@@ -47,8 +47,8 @@ document.getElementById('save-btn')?.addEventListener('click', () => {
     body: JSON.stringify(data)
   })
   .then(response => response.json())
-  .then(data => alert(data.message))
-  .catch(error => console.error('Error:', error));
+  .then(data => alert('Datos guardados exitosamente: ' + data.message))
+  .catch(error => console.error('Error al guardar los datos:', error));
 });
 
 document.getElementById('fetch-btn')?.addEventListener('click', () => {
@@ -65,5 +65,5 @@ document.getElementById('fetch-btn')?.addEventListener('click', () => {
         `).join('');
       }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => console.error('Error al obtener los destinos:', error));
 });
